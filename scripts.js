@@ -37,4 +37,12 @@ console.log(`Remaining provinces: ${filteredProvinces.length}`);
 const hasS = names.map(name => name.toLowerCase().includes('s'));
 console.log(hasS); // [true, true, false, true, true, false]
 
+const nameProvinceMap = names.reduce((obj, name, index) => {
+  obj[name] = provinces[index];
+  return obj;
+}, {});
+console.log(nameProvinceMap);
+
+console.log(products.forEach(product => console.log(product.product)));
+console.log(products.filter(product => product.product.length <= 5));
 
