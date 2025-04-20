@@ -13,3 +13,14 @@ const products = [
   { product: 'coffee', price: 10 },
   { product: 'tea', price: '' },
 ]
+
+names.forEach((name) => console.log(name));
+  provinces.forEach((province) => console.log(province));
+
+  //Log each name with their matching province
+  names.forEach((name, index) => {
+    console.log(`${name} (${provinces[index]})`);
+  });
+
+  const uppercasedProvinces = provinces.map(province => province.toUpperCase());
+console.log(uppercasedProvinces);
