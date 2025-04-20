@@ -22,5 +22,19 @@ names.forEach((name) => console.log(name));
     console.log(`${name} (${provinces[index]})`);
   });
 
-  const uppercasedProvinces = provinces.map(province => province.toUpperCase());
+const uppercasedProvinces = provinces.map(province => province.toUpperCase());
 console.log(uppercasedProvinces);
+
+const nameLengths = names.map(name => name.length);
+console.log(nameLengths);
+
+const sortedProvinces = [...provinces].sort(); // Using spread to avoid mutating the original
+console.log(sortedProvinces);
+
+const filteredProvinces = provinces.filter(province => !province.includes("Cape"));
+console.log(`Remaining provinces: ${filteredProvinces.length}`);
+
+const hasS = names.map(name => name.toLowerCase().includes('s'));
+console.log(hasS); // [true, true, false, true, true, false]
+
+
