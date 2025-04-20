@@ -46,3 +46,22 @@ console.log(nameProvinceMap);
 console.log(products.forEach(product => console.log(product.product)));
 console.log(products.filter(product => product.product.length <= 5));
 
+console.log(
+  products
+    .filter(product => product.price && !isNaN(product.price))
+    .map(product => Number(product.price))
+    .reduce((total, price) => total + price, 0)
+);
+
+console.log(
+  products.reduce((acc, product) => acc + product.product, '')
+);
+
+console.log(
+  (() => {
+    const prices = products
+      .filter(product => product.price && !isNaN(product.price))
+      .map(product => Number(product.price));
+    return `Highest: ${Math.max(...prices)}. Lowest: ${Math.min(...prices)}.`;
+  })()
+);
