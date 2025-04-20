@@ -65,3 +65,10 @@ console.log(
     return `Highest: ${Math.max(...prices)}. Lowest: ${Math.min(...prices)}.`;
   })()
 );
+
+console.log(
+  Object.entries(products).reduce((acc, [_, product]) => {
+    acc.push({ name: product.product, cost: product.price });
+    return acc;
+  }, [])
+);
